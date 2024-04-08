@@ -29,6 +29,14 @@ public class CryptoMarche {
 			FONCTION À IMPLEMENTER
         **/
 
+        for (Portefeuille p : this.portefeuilles) 
+        {
+            if (p.getProprietaire() == proprietaire)
+            {
+                return p.getMontant();
+            }    
+        }
+
         return 0;
     }
 
@@ -43,6 +51,14 @@ public class CryptoMarche {
         /**
 			FONCTION À IMPLEMENTER
         **/
+
+        for (Portefeuille p : this.portefeuilles) 
+        {
+            if(p.getMonnaie() == monnaie)
+            {
+                return p.getMontant();
+            }
+        }
 
         return 0;
 
