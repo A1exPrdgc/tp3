@@ -19,4 +19,8 @@ public class Cryptomonnaie{
     public String toString() {
         return String.format("%5s",nom) + ":" + String.format("%10.1f",valeurDeJeton);
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> c6edda5aafaab3e76b46ae2ec30a26e6c9e06639
