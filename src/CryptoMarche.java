@@ -26,17 +26,17 @@ public class CryptoMarche {
      */
     public double capitalEnEuros(String proprietaire)
 	{
-		double total = 0;
-
+		double capital = 0;
 		for (Portefeuille p : this.portefeuilles)
 		{
-			if (p.getProprietaire().equals(proprietaire))
+			if (p.estProprietaire(proprietaire))
 			{
-				total += p.getMontant();
+				capital += p.getMontant() * p.getMonnaie().getValeurDeJeton();
 			}
 		}
 
-		return total;
+		return capital;
+
     }
 
     /**
@@ -48,18 +48,16 @@ public class CryptoMarche {
      */
     public double capitalMonneaie(Cryptomonnaie monnaie)
 	{
-		double total = 0;
-
-		for (Portefeuille p : this.portefeuilles) 
+		double capital = 0;
+		for (Portefeuille p : this.portefeuilles)
 		{
-			if(p.getMonnaie().equals(monnaie))
+			if (p.getMonnaie().getNom().equals(monnaie.getNom()))
 			{
-				total += p.getMontant();
+				capital += p.getMontant() * p.getMonnaie().getValeurDeJeton();
 			}
 		}
 
-		return total;
-
+		return capital;
     }
 
     @Override
