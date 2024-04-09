@@ -1,5 +1,5 @@
 public class AthosCoin extends Cryptomonnaie{
     public AthosCoin(){
-        super("ARA", 1000);
+        super("AC", 2500);
     }
 }
